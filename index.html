@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life B1 • Units 5D–5E: Trade, Commerce and Consumer Rights</title>
+    <style>
+        :root {
+            --bg-color: #0b1120;
+            --card-bg: #161f30;
+            --subcard-bg: #1e293b;
+            --border-color: #334155;
+            --text-main: #cbd5e1;
+            --text-bright: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-cyan: #22d3ee;
+            --accent-purple: #c084fc;
+            --accent-amber: #f59e0b;
+            --accent-emerald: #3fb950;
+            --accent-crimson: #f85149;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .header-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 34px 24px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue), var(--accent-purple));
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: rgba(56, 189, 248, 0.15);
+            color: var(--accent-blue);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 14px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        .header-card h1 {
+            color: var(--text-bright);
+            font-size: 2.1rem;
+            margin-bottom: 8px;
+        }
+
+        .header-card p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+        }
+
+        .section-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
+        }
+
+        .svg-icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+            color: var(--accent-cyan);
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            color: var(--accent-cyan);
+            font-size: 1.35rem;
+            font-weight: 700;
+        }
+
+        .exercise {
+            background-color: var(--subcard-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .exercise-title {
+            color: var(--text-bright);
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+
+        .instruction {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+        }
+
+        .instruction em {
+            color: var(--accent-amber);
+            font-style: normal;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        li {
+            font-size: 0.95rem;
+        }
+
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .vocab-table th, .vocab-table td {
+            text-align: left;
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.93rem;
+        }
+
+        .vocab-table th {
+            color: var(--accent-blue);
+            background-color: rgba(56, 189, 248, 0.08);
+            font-weight: 600;
+        }
+
+        .vocab-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .word {
+            font-weight: 600;
+            color: var(--text-bright);
+        }
+
+        .text-box {
+            background-color: #0f172a;
+            border-left: 4px solid var(--accent-blue);
+            padding: 18px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .text-box p {
+            margin-bottom: 12px;
+        }
+
+        .text-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .theory-box {
+            background: rgba(192, 132, 252, 0.07);
+            border: 1px solid rgba(192, 132, 252, 0.3);
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 10px;
+        }
+
+        .theory-box h4 {
+            color: #d8b4fe;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        input[type="text"] {
+            background-color: #0b1120;
+            border: 1px solid var(--border-color);
+            color: #f8fafc;
+            padding: 6px 12px;
+            border-radius: 5px;
+            font-size: 0.92rem;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.15);
+        }
+
+        input[type="text"].correct {
+            border-color: var(--accent-emerald) !important;
+            background-color: rgba(63, 185, 80, 0.12) !important;
+        }
+
+        input[type="text"].incorrect {
+            border-color: var(--accent-crimson) !important;
+            background-color: rgba(248, 81, 73, 0.12) !important;
+        }
+
+        textarea {
+            width: 100%;
+            background-color: #0b1120;
+            border: 1px solid var(--border-color);
+            color: #f8fafc;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 0.93rem;
+            font-family: inherit;
+            outline: none;
+            resize: vertical;
+            min-height: 100px;
+            line-height: 1.6;
+        }
+
+        textarea:focus {
+            border-color: var(--accent-cyan);
+        }
+
+        .btn-check {
+            align-self: flex-start;
+            background-color: #1e293b;
+            color: var(--text-bright);
+            border: 1px solid var(--border-color);
+            padding: 8px 18px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 4px;
+        }
+
+        .btn-check:hover {
+            background-color: #334155;
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+
+        .feedback-msg {
+            font-size: 0.88rem;
+            margin-top: 4px;
+            display: none;
+        }
+
+        .feedback-msg.show {
+            display: block;
+        }
+
+        .feedback-msg.good {
+            color: var(--accent-emerald);
+        }
+
+        .feedback-msg.bad {
+            color: var(--accent-crimson);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header-card">
+        <span class="badge">Intermediate B1 • Units 5D & 5E</span>
+        <h1>From Caravans to Clicks: Trade, Orders & Customer Rights</h1>
+        <p>Commerce Through the Ages • Phone Inquiries & Formal Complaint Letters • Grammar: Modal Verbs of Request & Obligation</p>
+    </div>
+
+    <!-- 1. WARM UP -->
+    <div class="section-card">
+        <div class="section-header">
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            <div class="section-title">1. Warm-Up</div>
+        </div>
+
+        <div class="exercise">
+            <div class="exercise-title">Exercise 1.1: The Evolution of Shopping</div>
+            <div class="instruction">Discuss these questions with your tutor:</div>
+            <ul>
+                <li>How often do you purchase items online instead of visiting physical stores, and what factors determine that choice?[cite: 20]</li>
+                <li>Before digital marketplaces, international trade relied on physical routes such as the Silk Road or maritime merchant fleets. What were the main risks for ancient buyers when ordering goods from abroad?</li>
+                <li>When an item arrives damaged or fails to arrive at all, do you prefer resolving the dispute by making a phone call or writing a formal email? Why?[cite: 20, 21]</li>
+            </ul>
+        </div>
+
+        <div class="exercise">
+            <div class="exercise-title">Exercise 1.2: Order Problems Match</div>
+            <div class="instruction">Match each commercial situation (1–3) with the corresponding customer response (a–c):[cite: 20, 21]</div>
+            <ol>
+                <li>An item ordered online is currently out of stock.[cite: 20] &rarr; [ <input type="text" size="3" data-ans="b" placeholder="..."> ]</li>
+                <li>A customer receives a defective piece of hardware.[cite: 20, 21] &rarr; [ <input type="text" size="3" data-ans="a" placeholder="..."> ]</li>
+                <li>Delivery has been delayed by more than three weeks without explanation.[cite: 20, 21] &rarr; [ <input type="text" size="3" data-ans="c" placeholder="..."> ]</li>
+            </ol>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px;">
+                <b>a.</b> Request a replacement or ask for a full refund back to the credit card.[cite: 20, 21]<br>
+                <b>b.</b> Inquire about the restock date or cancel the order immediately.[cite: 20, 21]<br>
+                <b>c.</b> Contact customer support with the order number to track the parcel.[cite: 20, 21]
+            </p>
+            <button class="btn-check" onclick="checkTask(this)">Check Answers</button>
+            <div class="feedback-msg"></div>
+        </div>
+    </div>
+
+    <!-- 2. VOCABULARY -->
+    <div class="section-card">
+        <div class="section-header">
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+            <div class="section-title">2. Vocabulary: Commercial Transactions & Formal Register</div>
+        </div>
+
+        <div class="exercise">
+            <div class="exercise-title">Vocabulary Table: Shopping Inquiries & Correspondence</div>
+            <div class="instruction">Study the formal and informal pairs used in commercial correspondence:[cite: 20, 21]</div>
+            <table class="vocab-table">
+                <thead>
+                    <tr>
+                        <th>Informal / Neutral Phrase</th>
+                        <th>Formal Equivalent (Unit 5E)</th>
+                        <th>Russian Translation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="word">get</td>
+                        <td>receive</td>
+                        <td>получать[cite: 21]</td>
+                    </tr>
+                    <tr>
+                        <td class="word">be happy</td>
+                        <td>be delighted</td>
+                        <td>быть очень довольным / радым[cite: 21]</td>
+                    </tr>
+                    <tr>
+                        <td class="word">ask for</td>
+                        <td>request</td>
+                        <td>запрашивать[cite: 21]</td>
+                    </tr>
+                    <tr>
+                        <td class="word">give</td>
+                        <td>provide</td>
+                        <td>предоставлять[cite: 21]</td>
+                    </tr>
+                    <tr>
+                        <td class="word">give back money</td>
+                        <td>refund</td>
+                        <td>оформлять возврат средств[cite: 20, 21]</td>
+                    </tr>
+                    <tr>
+                        <td class="word">help</td>
+                        <td>assistance</td>
+                        <td>помощь / содействие[cite: 21]</td>
+                    </tr>
+                    <tr>
+                        <td class="word">say sorry</td>
+                        <td>apologise</td>
+                        <td>приносить извинения[cite: 20, 21]</td>
+                    </tr>
+                    <tr>
+                        <td class="word">tell</td>
+                        <td>inform</td>
+                        <td>сообщать / уведомлять[cite: 21]</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Vocab Ex 1 -->
+        <div class="exercise">
+            <div class="exercise-title">Exercise 2.1: Formal Register Transformation</div>
+            <div class="instruction">Replace the informal words in brackets with their formal counterparts from the table:[cite: 21]</div>
+            <ol>
+                <li>I am writing to ___________ [<b>ask for</b>] a full refund for my recent purchase.[cite: 21] &rarr; <input type="text" data-ans="request" placeholder="..."></li>
+                <li>We would be ___________ [<b>happy</b>] to deliver the replacement item tomorrow.[cite: 21] &rarr; <input type="text" data-ans="delighted" placeholder="..."></li>
+                <li>I ___________ [<b>say sorry</b>] for the delay in processing your package.[cite: 20, 21] &rarr; <input type="text" data-ans="apologise|apologize" placeholder="..."></li>
+                <li>Could you please ___________ [<b>give</b>] your order number and invoice date?[cite: 20, 21] &rarr; <input type="text" data-ans="provide" placeholder="..."></li>
+            </ol>
+            <button class="btn-check" onclick="checkTask(this)">Check Answers</button>
+            <div class="feedback-msg"></div>
+        </div>
+
+        <!-- Vocab Ex 2 -->
+        <div class="exercise">
+            <div class="exercise-title">Exercise 2.2: Phoning About an Order (Standard Phrases)</div>
+            <div class="instruction">Complete the customer service dialogue with: <em>[hold, dispatch, line, confirmation]</em>[cite: 20, 21]</div>
+            <ol>
+                <li>Customer: "Could you tell me if my clock has been sent yet?" — Assistant: "I can check that for you. Can I put you on ___________ for a moment?"[cite: 20] &rarr; <input type="text" data-ans="hold" placeholder="..."></li>
+                <li>Assistant: "The order is ready; our warehouse will ___________ the parcel this evening." &rarr; <input type="text" data-ans="dispatch" placeholder="..."></li>
+                <li>Customer: "Would you like me to send written ___________ by email?"[cite: 20] &rarr; <input type="text" data-ans="confirmation" placeholder="..."></li>
+                <li>Assistant: "Thank you for staying on the ___________; your tracking number is ready." &rarr; <input type="text" data-ans="line" placeholder="..."></li>
+            </ol>
+            <button class="btn-check" onclick="checkTask(this)">Check Answers</button>
+            <div class="feedback-msg"></div>
+        </div>
+
+        <!-- Vocab Ex 3 -->
+        <div class="exercise">
+            <div class="exercise-title">Exercise 2.3: Spelling on the Phone (The Phonetic Alphabet)</div>
+            <div class="instruction">Write the clarifying phrase used on the phone:[cite: 20]</div>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">
+                Example: <em>"A as in Alpha"</em>, <em>"F for Freddie"</em>.[cite: 20]
+            </p>
+            <ol>
+                <li>To confirm the letter <b>B</b>: "Is that B as in ___________ ?"[cite: 20] &rarr; <input type="text" data-ans="bravo" placeholder="Phonetic word..."></li>
+                <li>To confirm the letter <b>D</b>: "That's D for ___________ ." &rarr; <input type="text" data-ans="delta" placeholder="Phonetic word..."></li>
+            </ol>
+            <button class="btn-check" onclick="checkTask(this)">Check Answers</button>
+            <div class="feedback-msg"></div>
+        </div>
+    </div>
+
+    <!-- 3. READING -->
+    <div class="section-card">
+        <div class="section-header">
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            <div class="section-title">3. Reading: The Long History of Distance Shopping</div>
+        </div>
+
+        <div class="text-box">
+            <p><strong>Paragraph 1: Ancient Trade Tablets.</strong> Long before internet servers and automated emails existed, merchants carried out distance orders using clay tablets. In 1750 BC, a Babylonian customer named Nanni sent a formal written complaint on a cuneiform tablet to an ore merchant named Ea-nasir. Nanni had sent messengers through hazardous desert territory with silver, only to receive copper ingots of inferior quality. His written protest, demanding fair treatment and threatening to reject future deliveries, is recognized by historians as the oldest surviving consumer complaint in human history.</p>
+
+            <p><strong>Paragraph 2: The Mail-Order Revolution.</strong> Distance purchasing changed dramatically in the late 19th century with the expansion of transcontinental railways and postal systems. In 1872, Aaron Montgomery Ward in Chicago published the first single-sheet mail-order catalogue, offering rural farmers goods that had previously been available only in big cities. By standardizing item descriptions and introducing the radical promise of "satisfaction guaranteed or your money back," catalog shopping established the modern standards of returns, refunds, and remote customer service.</p>
+
+            <p><strong>Paragraph 3: Upcycling and Modern Ecological Commerce.</strong> Today, distance commerce has expanded beyond mass-manufactured goods toward niche sustainable trade. Online platforms such as Tecoart specialize in upcycled craftwork, turning discarded computer hard drives, circuit boards, and clockwork components into functional art. While the technological medium has shifted from Babylonian clay to railway catalogues and finally to web portals, the fundamental commercial contract remains unchanged: the seller must provide accurate descriptions, and the buyer expects reliable delivery and respectful assistance when problems arise.</p>
+        </div>
+
+        <!-- Reading Ex 1 -->
+        <div class="exercise">
+            <div class="exercise-title">Exercise 3.1: True, False, or Not Given?</div>
+            <div class="instruction">Determine whether each statement is <b>True (T)</b>, <b>False (F)</b>, or <b>Not Given (NG)</b> based on the text:</div>
+            <ol>
+                <li>Nanni's complaint in 1750 BC concerned the delivery of sub-standard copper ingots. &rarr; [ <input type="text" size="4" data-ans="t" placeholder="..."> ]</li>
+                <li>Ea-nasir replied with a formal apology and refunded Nanni's silver immediately. &rarr; [ <input type="text" size="4" data-ans="ng" placeholder="..."> ]</li>
+                <li>Montgomery Ward's mail-order business relied on railway networks to reach rural customers. &rarr; [ <input type="text" size="4" data-ans="t" placeholder="..."> ]</li>
+                <li>Companies like Tecoart exclusively produce original mechanical parts without using recycled materials.[cite: 20] &rarr; [ <input type="text" size="4" data-ans="f" placeholder="..."> ]</li>
+            </ol>
+            <button class="btn-check" onclick="checkTask(this)">Check Answers</button>
+            <div class="feedback-msg"></div>
+        </div>
+
+        <!-- Reading Ex 2 -->
+        <div class="exercise">
+            <div class="exercise-title">Exercise 3.2: Detailed Fact-Finding</div>
+            <div class="instruction">Answer the questions based on the text:</div>
+            <ol>
+                <li>What policy introduced by 19th-century mail-order catalogues remains a standard consumer right in online shopping today? &rarr; <input type="text" style="width: 80%;" data-ans="satisfaction guaranteed or your money back|money back|refunds and returns" placeholder="..."></li>
+                <li>What common feature connects Babylonian trade disputes with modern online shopping issues? &rarr; <input type="text" style="width: 80%;" data-ans="defective goods and poor quality|quality issues and delivery delays|the expectation of accurate descriptions" placeholder="..."></li>
+            </ol>
+            <button class="btn-check" onclick="checkTask(this)">Check Answers</button>
+            <div class="feedback-msg"></div>
+        </div>
+    </div>
+
+    <!-- 4. GRAMMAR -->
+    <div class="section-card">
+        <div class="section-header">
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.1.8-1.3-4.5-2.7V7z"/></svg>
+            <div class="section-title">4. Grammar: Modals of Politeness & Requests (<i>Can, Could, Would</i>)</div>
+        </div>
+
+        <div class="theory-box">
+            <h4>Grammar in Commercial Dialogues: Politeness Strategies</h4>
+            <p>Direct commands (<i>"Give me my money back"</i>, <i>"Cancel this"</i>) are inappropriate in professional customer service.[cite: 21] English uses modal auxiliaries and conditional structures to soften requests:</p>
+            <p><strong>1. Polite Inquiries and Offers:</strong><br>
+            • <i><b>Can / Could</b> I put you on hold for a moment?</i> (Asking permission)[cite: 20]<br>
+            • <i><b>Would you like</b> me to cancel the order, or <b>would you prefer</b> a replacement?</i>[cite: 20]</p>
+            <p><strong>2. Formal Written Requests:</strong><br>
+            • <i><b>Could you please</b> provide the tracking number?</i>[cite: 21]<br>
+            • <i>I <b>would be grateful if</b> you could refund the amount to my credit card.</i>[cite: 21]</p>
+            <p><strong>3. Indirect Questions:</strong><br>
+            • Direct: <i>When will it arrive?</i> &rarr; Indirect: <i>Could you tell me when it <b>will arrive</b>?</i> (Word order: Subject + Verb).</p>
+        </div>
+
+        <!-- Grammar Ex 1 -->
+        <div class="exercise">
+            <div class="exercise-title">Exercise 4.1: Transforming Direct Commands into Polite Requests</div>
+            <div class="instruction">Rewrite the blunt phrases into polite customer service language:[cite: 21]</div>
+            <ol>
+                <li>"I want my money back." &rarr; <em>I would like to request a</em> <input type="text" data-ans="refund" placeholder="...">.[cite: 21]</li>
+                <li>"Give us your order number." &rarr; <em>Could you please</em> <input type="text" data-ans="provide your order number|provide us with your order number" placeholder="...">?[cite: 21]</li>
+                <li>"Do you want any help?" &rarr; <em>Is there anything else I</em> <input type="text" data-ans="can help you with" placeholder="...">?[cite: 20, 21]</li>
+            </ol>
+            <button class="btn-check" onclick="checkTask(this)">Check Answers</button>
+            <div class="feedback-msg"></div>
+        </div>
+
+        <!-- Grammar Ex 2 -->
+        <div class="exercise">
+            <div class="exercise-title">Exercise 4.2: Indirect Question Word Order</div>
+            <div class="instruction">Form grammatically correct indirect questions:</div>
+            <ol>
+                <li>Where is the package now?<br>
+                &rarr; Could you tell me where <input type="text" data-ans="the package is now|the package is" placeholder="...">?</li>
+                <li>Has the item been dispatched yet?<br>
+                &rarr; Do you know whether the item <input type="text" data-ans="has been dispatched yet|has been dispatched" placeholder="...">?</li>
+                <li>How long will the repair take?<br>
+                &rarr; Could you advise me how long <input type="text" data-ans="the repair will take" placeholder="...">?</li>
+            </ol>
+            <button class="btn-check" onclick="checkTask(this)">Check Answers</button>
+            <div class="feedback-msg"></div>
+        </div>
+
+        <!-- Grammar Ex 3 -->
+        <div class="exercise">
+            <div class="exercise-title">Exercise 4.3: Choosing the Correct Auxiliary</div>
+            <div class="instruction">Choose the suitable modal word (<em>Could, Would, Can</em>):[cite: 20]</div>
+            <ol>
+                <li>___________ you like a refund or a voucher for your next order?[cite: 20] &rarr; <input type="text" data-ans="would" size="8"></li>
+                <li>___________ I speak to the customer service manager, please? &rarr; <input type="text" data-ans="could|can" size="8"></li>
+                <li>___________ you mind checking the warehouse stock once more? &rarr; <input type="text" data-ans="would" size="8"></li>
+            </ol>
+            <button class="btn-check" onclick="checkTask(this)">Check Answers</button>
+            <div class="feedback-msg"></div>
+        </div>
+    </div>
+
+    <!-- 5. SPEAKING -->
+    <div class="section-card">
+        <div class="section-header">
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+            <div class="section-title">5. Speaking</div>
+        </div>
+
+        <div class="exercise">
+            <div class="exercise-title">Task 5.1: The Customer Helpline (Role-Play)</div>
+            <div class="instruction">Work with your tutor to act out a telephone conversation based on Unit 5D:[cite: 20, 22]</div>
+            <ul>
+                <li><strong>Student (Customer):</strong> You ordered a vintage computer-part clock three weeks ago (Order number: 60531A).[cite: 20, 22] The item has not arrived. Inquire politely, spell your surname using the phonetic alphabet, and state whether you prefer a replacement or a refund.[cite: 20]</li>
+                <li><strong>Tutor (Service Assistant):</strong> Greet the customer, ask for verification details, put them on hold briefly, and explain that the item is currently out of stock.[cite: 20]</li>
+            </ul>
+        </div>
+
+        <div class="exercise">
+            <div class="exercise-title">Task 5.2: Commercial Ethics and Consumer Power</div>
+            <div class="instruction">Discuss with your tutor:</div>
+            <ul>
+                <li>How has internet commerce shifted the balance of power between consumers and corporations compared to ancient or 19th-century trade?</li>
+                <li>Do online customer reviews genuinely protect buyers, or do fake reviews distort the market?</li>
+                <li>Is upcycling (like turning electronic waste into decorative art) an effective environmental solution or merely a marketing trend?[cite: 20]</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const fields = document.querySelectorAll("input[type='text'], textarea");
+        fields.forEach((f, idx) => {
+            const saved = localStorage.getItem("life_5d5e_field_" + idx);
+            if (saved !== null) f.value = saved;
+            f.addEventListener("input", () => {
+                localStorage.setItem("life_5d5e_field_" + idx, f.value);
+            });
+        });
+    });
+
+    function cleanStr(s) {
+        return s.toLowerCase()
+                .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "")
+                .replace(/\s+/g, " ")
+                .trim();
+    }
+
+    function checkTask(btn) {
+        const container = btn.closest(".exercise");
+        const inputs = container.querySelectorAll("input[type='text']");
+        const feedback = container.querySelector(".feedback-msg");
+        let allOk = true;
+        let count = 0;
+
+        inputs.forEach(input => {
+            const possible = input.getAttribute("data-ans").split("|").map(cleanStr);
+            const val = cleanStr(input.value);
+            if (val.length > 0) count++;
+
+            if (possible.includes(val)) {
+                input.classList.remove("incorrect");
+                input.classList.add("correct");
+            } else {
+                input.classList.remove("correct");
+                input.classList.add("incorrect");
+                allOk = false;
+            }
+        });
+
+        feedback.classList.add("show");
+        if (allOk && count === inputs.length) {
+            feedback.className = "feedback-msg show good";
+            feedback.textContent = "All answers are correct.";
+        } else {
+            feedback.className = "feedback-msg show bad";
+            feedback.textContent = "Some answers are incorrect or empty. Please check your spelling and try again.";
+        }
+    }
+</script>
+
+</body>
+</html>
